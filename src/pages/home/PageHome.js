@@ -27,27 +27,10 @@ class Home extends React.Component {
             replayFlag: 0,
             sentReplayList: [],
             fileList: [],
-            // [{
-            //     imgUrl: 'https://img.alicdn.com/tps/TB1GnjaJFXXXXcpXFXXXXXXXXXX-2448-1836.jpg',
-            //     title: '小木屋',
-            // }]
             sentReplayList: [],
-            // [
-            //     { replayId: "4732", id: 393, content: "不相信", readStatus: "1", replayDate: "2018.05.07 14:54", },
-            //     { replayId: "4732", id: 393, content: "不相信", readStatus: "1", replayDate: "2018.05.07 14:54", },
-            //     { replayId: "4732", id: 393, content: "不相信", readStatus: "1", replayDate: "2018.05.07 14:54", },
-            //     { replayId: "4732", id: 393, content: "不相信", readStatus: "1", replayDate: "2018.05.07 14:54", },
-            //     { replayId: "4732", id: 393, content: "不相信", readStatus: "1", replayDate: "2018.05.07 14:54", },
-            //     { replayId: "4732", id: 393, content: "不相信", readStatus: "1", replayDate: "2018.05.07 14:54", },
-            //     { replayId: "4732", id: 393, content: "不相信", readStatus: "1", replayDate: "2018.05.07 14:54", }
-            // ],
             listData: [],
-            // [{
-            //     userCount: "（1人）", dataList:
-            //         [{ isReadCount: 1, MType: "T", memberId: 4732, memberName: "钉钉_2号老师", memberCount: 1 }]
-            //     , groupName: "老师", MType: "T"
-            // }]
         };
+        this.data = {noticeId,schoolId}
 
     }
     //文件点击
@@ -62,10 +45,10 @@ class Home extends React.Component {
         }
 
     }
-    fetchNoticeMember(cb){
+    fetchNoticeMember(cb) {
         Actions.fetchNoticeMember({
-            schoolId,noticeId
-        },cb);
+            schoolId, noticeId
+        }, cb);
     }
     render() {
         let t = this;
@@ -85,7 +68,7 @@ class Home extends React.Component {
                             noticeMsg={this.state.noticeMsg}
                             title={this.state.title}
                         />
-                        {this.state.sentUserCount>0&&<DetailFlow.ItemDeliver
+                        {this.state.sentUserCount > 0 && <DetailFlow.ItemDeliver
                             sentUserCount={this.state.sentUserCount}
                             readedUserCount={this.state.readedUserCount}
                             listData={this.state.listData}
@@ -110,6 +93,7 @@ class Home extends React.Component {
                             this.state.sentReplayList.map((item, index) => {
                                 return (
                                     <TreplyItem
+                                        data={this.data}
                                         key={index}
                                         {...item}
                                     />
