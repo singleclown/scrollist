@@ -1,0 +1,342 @@
+//容器
+{
+    "apicontent":"获取容器版本号"
+    "apiname":"version"
+}
+{
+    "apicontent":"获取微应用免登授权码"
+    "apiname":"requestAuthCode"
+}
+{
+    "apicontent":"微应用反馈式操作的临时授权码"
+    "apiname":"OperateAuthCode"
+}
+//设备
+{
+    "apicontent":"获取通用唯一识别码"
+    "apiname":"getUUID"
+}
+{
+    "apicontent":"获取热点接入信息"
+    "apiname":"getInterface"
+}
+{
+    "apicontent":"读取NFC芯片内容"
+    "apiname":"nfcRead"
+}
+{
+    "apicontent":"写NFC芯片"
+    "apiname":"nfcWrite"
+}
+//启动器
+{
+    "apicontent":"检测应用是否安装"
+    "apiname":"checkInstalledApps"
+}
+{
+    "apicontent":"启动第三方应用"
+    "apiname":"launchApp"
+}
+{
+    "apicontent":"获取当前网络类型"
+    "apiname":"NetworkType"
+}
+{
+    "apicontent":"事件添加监听"
+    "apiname":"EventListener"
+}
+//钉盘
+{
+    "apicontent":"转存文件到钉盘"
+    "apiname":"saveFile"
+}
+{
+    "apicontent":"钉盘文件预览"
+    "apiname":"preview"
+}
+{
+    "apicontent":"上传附件"
+    "apiname":"uploadAttachment"
+}
+//弹窗
+{
+    "apicontent":"提示"
+    "apiname":"alert"
+}
+{
+    "apicontent":"确认"
+    "apiname":"confirm"
+}
+{
+    "apicontent":"信息输入提示框"
+    "apiname":"prompt"
+}
+{
+    "apicontent":"震动"
+    "apiname":"vibrate"
+}
+{
+    "apicontent":"加载等待框"
+    "apiname":"showPreloader"
+}
+{
+    "apicontent":"立即消失的提示框"
+    "apiname":"toast"
+}
+{
+    "apicontent":"单选列表"
+    "apiname":"actionsheet"
+}
+{
+    "apicontent":"modal弹浮层"
+    "apiname":"modal"
+}
+//加速器
+{
+    "apicontent":"摇一摇"
+    "apiname":"clearShake"
+}
+//地图
+{
+    "apicontent":"获取当前地理位置"
+    "apiname":"geolocation"
+}
+{
+    "apicontent":"地图定位"
+    "apiname":"locate"
+}
+{
+    "apicontent":"POI搜索"
+    "apiname":"search"
+}
+{
+    "apicontent":"地图展示位置"
+    "apiname":"mapview"
+}
+//业务
+{
+    "apicontent":"打开应用内页面"
+    "apiname":"openpage"
+}
+{
+    "apicontent":"分享"
+    "apiname":"share"
+}
+{
+    "apicontent":"ut数据埋点"
+    "apiname":"ut"
+}
+{
+    "apicontent":"上传图片"
+    "apiname":"uploadImage"
+}
+{
+    "apicontent":"上传图片（仅支持拍照上传）"
+    "apiname":"uploadImageFromCamera"
+}
+{
+    "apicontent":"图片浏览器"
+    "apiname":"previewImage"
+}
+{
+    "apicontent":"日期选择器"
+    "apiname":"datepicker"
+}
+{
+    "apicontent":"下拉控件"
+    "apiname":"chosen"
+}
+{
+    "apicontent":"在新窗口上打开链接"
+    "apiname":"openLink"
+}
+//会话
+{
+    "apicontent":"获取会话信息"
+    "apiname":"pickConversation"
+}
+{
+    "apicontent":"根据corpid选择会话"
+    "apiname":"chooseConversationByCorpId"
+}
+{
+    "apicontent":"根据chatid跳转到对应会话"
+    "apiname":"toConversation"
+}
+//发钉
+{
+    "apicontent":"发钉"
+    "apiname":"postding"
+}
+//电话
+{
+    "apicontent":"打电话"
+    "apiname":"call"
+}
+//ui
+{
+    "apicontent":"输入框"
+    "apiname":"plain"
+}
+{
+    "apicontent":"设置顶部进度条颜色设置顶部进度条颜色"
+    "apiname":"setColors"
+}
+{
+    "apicontent":"启用下拉刷新"
+    "apiname":"pullToRefresh"
+}
+{
+    "apicontent":"禁用下拉刷新"
+    "apiname":"Refresh"
+}
+{
+    "apicontent":"启用iOS webview弹性效果"
+    "apiname":"启用bounce"
+}
+{
+    "apicontent":"禁用iOS webview弹性效果(仅iOS支持) ）"
+    "apiname":"禁用bounce"
+}
+{
+    "apicontent":"收起下拉loading"
+    "apiname":"Refreshstop"
+}
+//音频
+{
+    "apicontent":"开始录音"
+    "apiname":"startRecord"
+}
+{
+    "apicontent":"停止录音"
+    "apiname":"stopRecord"
+}
+{
+    "apicontent":"监听录音自动停止"
+    "apiname":"onRecordEnd"
+}
+{
+    "apicontent":"下载音频"
+    "apiname":"downloadaudio"
+}
+{
+    "apicontent":"播放语音"
+    "apiname":"audio.play"
+}
+{
+    "apicontent":"暂停播放语音"
+    "apiname":"audio.pause"
+}
+{
+    "apicontent":"恢复暂停播放的语音"
+    "apiname":"audio.resume"
+}
+{
+    "apicontent":"停止播放语音"
+    "apiname":"audio.stop"
+}
+{
+    "apicontent":"监听播放自动停止"
+    "apiname":"audio.onPlayEnd"
+}
+{
+    "apicontent":"语音转文字接口"
+    "apiname":"audio.translateVoice"
+}
+//扫码
+{
+    "apicontent":"扫描条形码、二维码"
+    "apiname":"scan"
+}
+{
+    "apicontent":"扫描名片"
+    "apiname":"scanCard"
+}
+//企业通讯录
+{
+    "apicontent":"选人"
+    "apiname":"contact.choose"
+}
+{
+    "apicontent":"选部门"
+    "apiname":"complexPicker"
+}
+{
+    "apicontent":"选择部门信息接口"
+    "apiname":"departmentsPicker"
+}
+{
+    "apicontent":"创建企业群聊天"
+    "apiname":"createGroup"
+}
+{
+    "apicontent":"设定规则选人"
+    "apiname":"contact.setRule"
+}
+//自定义联系人
+{
+    "apicontent":"单选自定义联系人"
+    "apiname":"customContact.choose"
+}
+{
+    "apicontent":"多选自定义联系人"
+    "apiname":"customContact.multipleChoose"
+}
+//外部联系人
+{
+    "apicontent":"选择外部联系人"
+    "apiname":"externalComplexPicker"
+}
+{
+    "apicontent":"编辑外部联系人"
+    "apiname":"externalEditForm"
+}
+//导航栏
+{
+    "apicontent":"设置导航栏颜色"
+    "apiname":"dd_nav_bgcolor"
+}
+{
+    "apicontent":"禁止导航栏右侧分享按钮"
+    "apiname":"dd_share"
+}
+{
+    "apicontent":"设置导航栏标题"
+    "apiname":"setTitle"
+}
+{
+    "apicontent":"标题栏添加问号Icon"
+    "apiname":"setIcon"
+}
+{
+    "apicontent":"设置左侧导航按钮"
+    "apiname":"setLeft"
+}
+//聊天页面活动视图入口
+{
+    "apicontent":"获取IM消息"
+    "apiname":"fetchData"
+}
+{
+    "apicontent":"进入聊天页面后会根据锚点滚动到锚点对应的消息出"
+    "apiname":"locationChatMessage"
+}
+//获取非组织架构用户信息
+{
+    "apicontent":"获取非组织架构用户信息"
+    "apiname":"user.get"
+}
+//数据加密解密
+{
+    "apicontent":"对数据进行加密处理"
+    "apiname":"encrypt"
+}
+{
+    "apicontent":"数据进行解密处理"
+    "apiname":"decrypt"
+}
+//支付接口
+{
+    "apicontent":"支付宝支付"
+    "apiname":"alipay.pay"
+}

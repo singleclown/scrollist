@@ -1,0 +1,78 @@
+@import '~saltui/build/dd.css';
+  tab_color =  white
+  tab_selectcolor = #53CAC3 
+body
+    font-size 0.4rem
+    font-family Helvetica, Tahoma, Arial, "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei"
+    font-family Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei"
+    .t-nav-bar
+        background-color: rgb(44,121,191)
+        .t-nav-bar-left-option
+          >span
+            display: none
+        svg 
+          fill white
+        &.ios-nav-bar
+          top 20px
+          / .ios-nav-bar-top
+            margin-top: 20px
+            .pendinglist
+              top 115px
+            .awarddetail-box
+              margin-top: 20px
+            .parentaward
+              .pendinglist
+                  top 70px
+
+    .omt
+      overflow hidden
+      text-overflow ellipsis
+for row in 1..200
+  .t-MT{row}
+    margin-top 1px * row
+  .t-MB{row}
+    margin-bottom 1px * row
+  .t-ML{row}
+    margin-left 1px * row 
+  .t-MR{row}
+    margin-right 1px * row     
+  .t-PT{row}
+    padding-top 1px * row
+  .t-PL{row}
+    padding-left 1px * row
+  .t-PR{row}
+    padding-right 1px * row  
+  .t-LH{row}
+    line-height 1px * row  
+
+for row in 1..100
+  .t-SMT{row}
+    margin-top (1rem / 37.5 * row)
+  .t-SMB{row}
+    margin-bottom (1rem / 37.5 * row)
+  .t-SML{row}
+    margin-left (1rem / 37.5 * row) 
+  .t-SMR{row}
+    margin-right (1rem / 37.5 * row)     
+  .t-SPT{row}
+    padding-top (1rem / 37.5 * row)
+  .t-SPB{row}
+    padding-bottom (1rem / 37.5 * row)
+  .t-SLH{row}
+    line-height (1rem / 37.5 * row) 
+/*字号*/
+for row in 1..100
+  .ft{row}
+    font-size (1rem / 37.5 * row) 
+
+for row in 1..100
+  .fs{row}
+    font-size (1px * row) 
+
+
+
+
+
+
+
+

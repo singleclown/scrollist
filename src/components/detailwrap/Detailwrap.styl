@@ -1,0 +1,91 @@
+$baccolor =#f5f8fa;
+$color1=rgb(220,239,253)
+$color2=rgb(124,194,245)
+$color3=#333
+$color4=#e6e6e6
+$color5=rgb(245,248,250)
+$color6=rgb(237,51,59)
+
+$noticecontent_font=13px
+.detailwrap
+    color: $color2
+    .color
+      color $color6
+    &.head
+      background: white
+      .head-theme
+        background: $color1
+        padding: 10px
+        padding-left:0 
+        padding-bottom:0 
+        border-top-left-radius: 8px
+        border-top-right-radius: 8px
+    &.item
+      background: $baccolor
+      width: 100%
+      .item-content
+          background: white
+          margin: 0 10px
+          div
+            background: white
+            color: $color3
+          &-title
+            border-bottom: 1px solid $color4
+          &-noticecontent
+            padding: 18px 0 36px 0
+    .tag-box
+        position: absolute
+        height: 30px
+        width: 100px
+        top 35px
+        left: 0
+        .tag
+          position: absolute
+          top 0
+          left: 0
+          height: 24px
+          z-index: 10
+        &-content        
+          font-size: $tag_content_font
+          left 14px
+          position: absolute;
+          z-index: 11
+          top: 22%;
+          height: 24px;
+          color: white
+    .vacant-position
+      width: 10px
+      height: 54px
+      .vacant-position-top
+        height: (h=70%)
+        background: white
+        width: 100%
+      .vacant-position-bottom
+        height: 30%
+        background: $color5
+        width: 100%
+        border-top: 1px solid #e6e6e6     
+    &.item-list
+        margin: 0 10px
+        margin-top:10px
+        svg
+          margin-right: -15px   
+        .t-field-box
+          padding-left: 8px  
+    .item-list-box
+        padding 6px 10px
+        &-content
+          color #999999
+          font-size: 12px
+
+
+
+.hairline .t-group-list{
+  border-bottom:none!important
+}
+
+.hairline .t-BT1{
+  border-top: none!important;
+}
+.t-popup-slide-left
+    left 0
