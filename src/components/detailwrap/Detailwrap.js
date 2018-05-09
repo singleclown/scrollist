@@ -9,7 +9,8 @@ const Person = require('images/svg/person.svg')
 const Tag = require('images/svg/tag.svg')
 const classNames = require("classnames");
 import { monStorage, Storage } from 'clientConfig/util/StoreData';
-
+import { ready } from 'clientConfig/util/queryurlfield'
+const ui = require('clientConfig/util/jsapi/ui');
 const handleClick = (item) => {
     let { warnId, studentId, teacherId, schoolId, warnTypeId, warnGrade, warnLevel, warnDate } = item;
     Control.go('/home/personalwarnlinfo', { data: { warnId, studentId, teacherId, schoolId, warnTypeId, warnGrade, warnLevel, warnDate } })
@@ -37,15 +38,24 @@ const showPopupContent = (listData) => {
     return component
 }
 
-const handleClickShowMember = (fetchNoticeMember,listData) => {
-    if(fetchNoticeMember){
-        const cb = (listData=[])=>{
+const handleClickShowMember = (fetchNoticeMember, listData,handlecb) => {
+    if (fetchNoticeMember) {
+        const cb = (listData = []) => {
+            ready(() => { ui.setTitle({ title: "查看发布对象" }) })
+            ready(() => {
+                ui.setLeft({ control: true, text: '返回' }, (isSuccessed, result) => {
+                    if (isSuccessed) {
+                        Popup.hide();
+                        handlecb&&handlecb()
+                    }
+                });
+            })
             Popup.show(showPopupContent(listData), {
                 animationType: 'slide-left',
             });
         }
-        fetchNoticeMember(cb);  
-    } 
+        fetchNoticeMember(cb);
+    }
 }
 const Detailwrap = {
     Head: (props) => {
@@ -70,7 +80,7 @@ const Detailwrap = {
                         </HBox>
                         <HBox className="t-MT4 t-MB10">
                             <Box flex={1}></Box>
-                            <Box>{props.senderData}</Box>      
+                            <Box>{props.senderData}</Box>
                         </HBox>
                     </Box>
                     <Box className="vacant-position">
@@ -98,7 +108,7 @@ const Detailwrap = {
     ItemDeliver: (props) => {
         return (
             <Group className="detailwrap item-list">
-                <div onClick={() => { handleClickShowMember(props.fetchNoticeMember,props.listData) }}>
+                <div onClick={() => { handleClickShowMember(props.fetchNoticeMember, props.listData,props.cb) }}>
                     <Group.List >
                         <Field className="fs14" label="" icon={<AngleRight width="20" height="20" fill="#ccc" />} tappable={true}>
                             <div >查看发布对象<span className="t-ML5">已读(<span className="color">{props.readedUserCount}</span>/{props.sentUserCount}人)</span></div>

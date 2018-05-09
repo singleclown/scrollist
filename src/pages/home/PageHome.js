@@ -51,6 +51,13 @@ class Home extends React.Component {
             schoolId, noticeId
         }, cb);
     }
+    cb(){
+        ready(() => {
+            ui.setLeft({ control: false, text: '' }, (isSuccessed, result) => {
+               
+            });
+        })
+    }
     render() {
         let t = this;
         return (
@@ -74,6 +81,7 @@ class Home extends React.Component {
                             readedUserCount={this.state.readedUserCount}
                             listData={this.state.listData}
                             fetchNoticeMember={this.fetchNoticeMember}
+                            cb={this.cb}
                         />}
                         {/* 文件显示 */}
                         {
