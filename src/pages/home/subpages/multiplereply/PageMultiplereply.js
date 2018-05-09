@@ -8,6 +8,8 @@ const Store = require('./store');
 const Replylist = require('components/replylist');
 const WithRefresh = require('components/withrefresh');
 const PendingList = require('components/pendinglist');
+import { ready } from 'clientConfig/util/queryurlfield'
+const ui = require('clientConfig/util/jsapi/ui');
 const ListWithReply = WithRefresh(
     PendingList,
     (pageNum, props, success, error) => {
@@ -20,22 +22,16 @@ class Multiplereply extends React.Component {
         super(props);
         this.state = {
         };
-        var data = Control.state.data;
-        var formData = Control.state.formData;
-        var { schoolId, noticeId, replayId, userType } = { ...data, ...formData };
-        this.schoolId = schoolId;
-        this.noticeId = noticeId;
-        this.replayId = replayId;
-        this.userType = userType;
         this.handleReply = this.handleReply.bind(this);
         this.handleOnLeftClick = this.handleOnLeftClick.bind(this)
     }
     handleReply(text) {
+        if(!text)return;
         let t = this;
         const cb = () => {
             t.refs.ListWithReply.onRefresh()
         };
-        Actions.replyusermsg({ text, schoolId: this.schoolId, noticeId: this.noticeId, replayId: this.replayId, userType: this.userType }, cb)
+        Actions.replyusermsg({ text }, cb)
     }
     handleOnLeftClick() {
         Control.go(-1);
@@ -49,10 +45,6 @@ class Multiplereply extends React.Component {
                         ref="ListWithReply"
                         leftSlip={false}
                         type="replylistitem"
-                        schoolId={this.schoolId}
-                        noticeId={this.noticeId}
-                        replayId={this.replayId}
-                        userType={this.userType}
                     />
                     </div>
                     <Replylist
@@ -66,6 +58,7 @@ class Multiplereply extends React.Component {
     }
 
     componentWillMount() {
+        ready(() => { ui.setTitle({ title: "更多回复" }); })
     }
 
     componentDidMount() {

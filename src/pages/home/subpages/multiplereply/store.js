@@ -10,10 +10,10 @@ module.exports = Reflux.createStore({
         
         DB.Reply.teach_get_replayList({
             pageIndex: pageNum,
-            schoolId: props.schoolId,
-            noticeId: props.noticeId,
-            replayId: props.replayId,
-            userType: props.userType,
+            schoolId: schoolId,
+            noticeId: noticeId,
+            replayId: teacherId,
+            userType: userType,
         })
             .then((content) => {
                 let schoolId = content.check.schoolId;
@@ -55,11 +55,11 @@ module.exports = Reflux.createStore({
     //作为发布方回复
     onReplyusermsg: function (params, cb) {
         DB.Reply.teach_reply_usermsg({
-            schoolId:params.schoolId,
-            noticeId:params.noticeId,
-            replayId:params.replayId,
+            schoolId:schoolId,
+            noticeId:noticeId,
+            replayId:teacherId,
             content: params.text,
-            userType:params.userType
+            userType:userType
         })
             .then((content) => {
                 if (content.code == '1') {

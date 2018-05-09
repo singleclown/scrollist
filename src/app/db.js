@@ -33,33 +33,8 @@ const context = nattyFetch.context({
 });
 //老师端接口
 context.create('Notice', {
-    get_notice_lists: {
-        mockUrl: 'query/getListInfo.json',
-        url: 'notice/teacher/tcrReceivedNotices'
-    },
-    get_sentnotice_lists: {
-        mockUrl: 'query/getListInfo.json',
-        url: 'notice/teacher/tcrSentNotices'
-    },
-    get_notice_detail: {
-        url: 'notice/teacher/newNoticeDetail'
-    },
     get_sentnotice_detail: {
         url: 'notice/teacher/sentNoticeDetail'
-    },
-    get_org_lists: {
-        mockUrl: 'query/getOrgListInfo.json',
-        url: 'notice/teacher/chosenNoticeMember'
-    },
-    deliver_notice: {
-        url: 'notice/teacher/sendNoticeWithImg',
-        method: 'POST'
-    },
-    del_sent_notice: {
-        url: 'notice/teacher/tchDeleteBatchSentedNotice'
-    },
-    del_receive_notice: {
-        url: 'notice/teacher/deleteBatchReceivedNotice'
     },
     get_notice_member: {
         url: 'notice/teacher/showNoticeMember'
@@ -72,15 +47,8 @@ context.create('Notice', {
     }
 });
 context.create('Reply', {
-    teach_reply_msg: {
-        url: 'notice/teacher/tchReplayNotice',//老师作为回复方
-        method:"post"
-    },
     teach_get_replayList:{
         url:'notice/teacher/getPersonalReplayList',
-    },
-    parent_reply_msg: {
-        url: 'notice/parent/prtReplayNotice'
     },
     teach_reply_usermsg:{
         url:'notice/teacher/tchReplayUser',//老师作为发布方
@@ -89,9 +57,6 @@ context.create('Reply', {
 });
 //家长端接口
 context.create('ParentNotice', {
-    get_notice_lists: {
-        url: 'notice/parent/prtReceivedNotices'
-    },
     get_notice_detail: {
         url: 'notice/parent/prtNoticeDetail'
     },

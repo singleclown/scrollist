@@ -106,10 +106,7 @@ module.exports = Reflux.createStore({
         })
             .then((content) => {
                 if (content.code == '1') {
-
-
                     this.updateComponent();
-
                 }
             })
             .catch(function (error) {

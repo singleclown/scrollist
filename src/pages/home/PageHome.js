@@ -11,6 +11,7 @@ const ui = require('clientConfig/util/jsapi/ui');
 const reactMixin = require('react-mixin');
 const Actions = require('./actions');
 const Store = require('./store');
+import { ready } from 'clientConfig/util/queryurlfield'
 class Home extends React.Component {
 
     constructor(props) {
@@ -108,7 +109,7 @@ class Home extends React.Component {
     }
 
     componentWillMount() {
-        ui.setTitle({ title: "通知详情" });
+        ready(() => { ui.setTitle({ title: "通知详情" }) })
     }
 
     componentDidMount() {
