@@ -1,6 +1,9 @@
 const Actions = require('./actions');
 const DB = require('app/db');
 import { Toast } from 'saltui';
+import { ready } from 'clientConfig/util/queryurlfield'
+import { monStorage, Storage } from 'clientConfig/util/StoreData';
+const device = require('clientConfig/util/jsapi/device');
 module.exports = Reflux.createStore({
     listenables: [Actions],
     data: {
@@ -54,6 +57,7 @@ module.exports = Reflux.createStore({
     },
     //作为发布方回复
     onReplyusermsg: function (params, cb) {
+        ready(() => { device.showPreloader() })
         DB.Reply.teach_reply_usermsg({
             schoolId:schoolId,
             noticeId:noticeId,
@@ -63,6 +67,7 @@ module.exports = Reflux.createStore({
         })
             .then((content) => {
                 if (content.code == '1') {
+                    ready(() => { device.hidePreloader() })
                     cb&&cb();
                 }
 
