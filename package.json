@@ -20,7 +20,7 @@
     "natty-fetch": "^2.5.2",
     "react-keeper": "^2.1.6",
     "react-mixin": "~1.7.0",
-    "saltui": "^3.5.13",
+    "saltui": "^3.8.28",
     "whatwg-fetch": "^2.0.3"
   }
 }
