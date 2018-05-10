@@ -1,5 +1,4 @@
 require('./Pendinglist.styl');
-const Listitem = require('components/listitem');
 const Replylistitem = require('components/replylistitem');
 
 import classNames from 'classnames';
@@ -22,7 +21,6 @@ class Pendinglist extends React.Component {
         return (
             // <div className={classNames('pendinglist')}></div>
                 <div className={classNames("pendinglist", { "detail-height": this.props.norefresh })}>
-                    {!this.props.norefresh ?
                         <ScrollList
                             dataGetted={this.props.dataGetted}
                             data={this.props.data}
@@ -35,17 +33,7 @@ class Pendinglist extends React.Component {
                             desMaxLine={14}
                         >
                             {RefreshItem}
-                        </ScrollList> :
-                        (this.props.data && this.props.data.length > 0 && this.props.data.map((item, index) => {
-                            return (
-                                <Listitem
-                                    {...this.props}
-                                    select={false}
-                                    ref={`listItem${index}`}
-                                    data={item}
-                                    key={index}
-                                />);
-                        }))}
+                        </ScrollList> 
                 </div>
             
         );
